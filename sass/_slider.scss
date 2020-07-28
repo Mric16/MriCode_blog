@@ -1,0 +1,104 @@
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+.slider {
+  margin: 0 auto;
+  margin-top: 2rem;
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  @include breakpoint-down(large) {
+    width: 90%;
+  }
+  @include breakpoint-down(medium) {
+    width: 95%;
+  }
+  &__control {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.2);
+    }
+    &--previous {
+      display: inline-block;
+      margin-right: 1rem;
+      img {
+        @include breakpoint-down(large) {
+          width: 17px;
+        }
+        @include breakpoint-down(medium) {
+          width: 13.02px;
+        }
+      }
+    }
+    &--next {
+      display: inline-block;
+      margin-left: 1rem;
+      img {
+        @include breakpoint-down(large) {
+          width: 17px;
+        }
+        @include breakpoint-down(medium) {
+          width: 13.02px;
+        }
+      }
+    }
+  }
+  &__items {
+    list-style: none;
+  }
+  &__item {
+    box-shadow: 0 0.5rem 2.1rem rgba(#000, 0.25);
+    display: none;
+    grid-template-columns: 1fr 2fr;
+    max-width: 60.5rem;
+    padding: 0.7rem;
+    gap: 2rem;
+    @include breakpoint-down(large) {
+      gap: 1rem;
+    }
+    @include breakpoint-down(medium) {
+      gap: 0.2rem;
+    }
+    &__image {
+      max-width: 100%;
+      &--1 {
+        background-image: url("https://s3-alpha-sig.figma.com/img/c593/ca89/fee9cd0398cc0f8ca7272258e754ed96?Expires=1597017600&Signature=WHwIfLwerkJc95sowJK-p6FPHxM7ZTcjmqtnnCSNgqjzTvWTmnh4SDR1Ovlfx-i8rAXzGGEv0ep6fD2OqJsp4QmgrxVMVuf3XAuuRezbokloxFDP9Zqz6q3rR5Qf~RPRpqJ~rmiOcGPwlZRQum9S9xng8bgur9SxYLbrzIi8uf3gZXttcj36l6Cfc0dIuwFNko~0Rff7gf0lb2ryopZo1-SSPgIL9mQAlMWPBu9jcXLynP4La8nluzmDSeOh-J88BrN2AuL6IEGsQvor2nWwaRpBhiLiM0dzuh6WFkIL6vdDDG7iMJbfBTS9BlJ1euj5w-uenwCBpr9riAsZ4Ur~rQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
+        background-size: cover;
+        background-position: center;
+      }
+    }
+    &__text {
+      display: grid;
+      grid-template-rows: max-content 1fr max-content;
+      gap: 0.5rem;
+      .btn-secondary {
+        justify-self: end;
+      }
+    }
+    &.current {
+      display: grid;
+    }
+  }
+}
+@keyframes slideLeft {
+  0% {
+    opacity: 0.5;
+    transform: translateX(30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideRight {
+  0% {
+    opacity: 0.5;
+    transform: translateX(-30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

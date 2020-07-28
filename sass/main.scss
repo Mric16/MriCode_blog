@@ -1,0 +1,40 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+body {
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+}
+h1.h2.h3 {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+@import "./mixins";
+
+.container {
+  max-width: 1336px;
+  width: calc(100vw - 20px);
+  margin: 0 auto;
+  margin-top: 39px;
+  box-shadow: 0 14px 21px rgba(#000, 0.4);
+  border-radius: 10px 10px 0 0;
+  height: 100vh;
+  @include breakpoint-down(medium) {
+    margin-top: 5px;
+  }
+}
+@import "./header";
+@import "./btn";
+@import "./nav";
+@import "./typography";
+@import "./slider";
