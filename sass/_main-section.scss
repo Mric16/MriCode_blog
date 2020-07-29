@@ -29,10 +29,11 @@
     background-color: #fff;
     box-shadow: 0 10px 18px rgba(#000, 0.4);
     border-radius: 10px 10px 0 0;
+    z-index: 4;
     @include breakpoint-down(large) {
       grid-column: 1/-1;
       border-radius: 0;
-      box-shadow: 0 8px 16px rgba(#000, 0.4);
+      box-shadow: 0 5px 10px rgba(#000, 0.4);
     }
     .post {
       box-shadow: 0 0.5rem 2.1rem rgba(#000, 0.25);
@@ -43,9 +44,11 @@
       gap: 2rem;
       @include breakpoint-down(large) {
         gap: 1rem;
+        margin: 1rem;
       }
       @include breakpoint-down(medium) {
         gap: 0.4rem;
+        margin: 0.5rem;
       }
       &__image {
         max-width: 100%;
@@ -83,10 +86,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 1;
     @include breakpoint-down(large) {
       grid-column: 1/-1;
       padding: 1rem;
-      box-shadow: 0 8px 16px rgba(#000, 0.4);
+      box-shadow: 0 5px 10px rgba(#000, 0.4);
     }
     &__text {
     }
@@ -113,10 +117,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 3;
     @include breakpoint-down(large) {
       grid-column: 1/-1;
       padding: 1rem;
-      box-shadow: 0 8px 16px rgba(#000, 0.4);
+      box-shadow: 0 5px 10px rgba(#000, 0.4);
     }
   }
 }

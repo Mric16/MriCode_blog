@@ -36,8 +36,8 @@ a {
     width: calc(100vw - 30px);
   }
   @include breakpoint-down(medium) {
-    margin-top: 10px;
-    width: calc(100vw - 25px);
+    margin-top: 5px;
+    width: calc(100vw - 20px);
   }
 }
 @import "./header";
