@@ -6,7 +6,7 @@
   padding: 0.8rem;
   box-shadow: 0 8px 18px rgba(#000, 0.25);
   transition: all 0.4s ease-in;
-
+  z-index: 1000;
   &__items {
     width: 80%;
     margin: 0 auto;

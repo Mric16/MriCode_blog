@@ -1,0 +1,122 @@
+.main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: min-content;
+  grid-auto-flow: dense;
+  gap: 2rem;
+
+  padding: 5rem 2rem;
+  @include breakpoint-down(large) {
+    grid-column: 1fr;
+    gap: 1rem;
+    padding: 4rem 1rem;
+  }
+  @include breakpoint-down(medium) {
+  }
+  .sidebar {
+    position: sticky;
+    display: grid;
+    grid-template-rows: min-content min-content;
+    grid-column: 2/-1;
+    gap: 2rem;
+    @include breakpoint-down(large) {
+      grid-column: 1/-1;
+      gap: 1rem;
+    }
+  }
+  .posts {
+    grid-column: 1/2;
+    background-color: #fff;
+    box-shadow: 0 10px 18px rgba(#000, 0.4);
+    border-radius: 10px 10px 0 0;
+    @include breakpoint-down(large) {
+      grid-column: 1/-1;
+      border-radius: 0;
+      box-shadow: 0 8px 16px rgba(#000, 0.4);
+    }
+    .post {
+      box-shadow: 0 0.5rem 2.1rem rgba(#000, 0.25);
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      padding: 0.7rem;
+      margin: 2rem;
+      gap: 2rem;
+      @include breakpoint-down(large) {
+        gap: 1rem;
+      }
+      @include breakpoint-down(medium) {
+        gap: 0.4rem;
+      }
+      &__image {
+        max-width: 100%;
+        background-size: cover;
+        background-position: center;
+        &--1 {
+          background-image: url("https://s3-alpha-sig.figma.com/img/c593/ca89/fee9cd0398cc0f8ca7272258e754ed96?Expires=1597017600&Signature=WHwIfLwerkJc95sowJK-p6FPHxM7ZTcjmqtnnCSNgqjzTvWTmnh4SDR1Ovlfx-i8rAXzGGEv0ep6fD2OqJsp4QmgrxVMVuf3XAuuRezbokloxFDP9Zqz6q3rR5Qf~RPRpqJ~rmiOcGPwlZRQum9S9xng8bgur9SxYLbrzIi8uf3gZXttcj36l6Cfc0dIuwFNko~0Rff7gf0lb2ryopZo1-SSPgIL9mQAlMWPBu9jcXLynP4La8nluzmDSeOh-J88BrN2AuL6IEGsQvor2nWwaRpBhiLiM0dzuh6WFkIL6vdDDG7iMJbfBTS9BlJ1euj5w-uenwCBpr9riAsZ4Ur~rQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
+        }
+      }
+      &__text {
+        display: grid;
+        grid-template-rows: max-content 1fr max-content;
+        gap: 0.5rem;
+      }
+      &__buttons {
+        display: grid;
+        grid-template-columns: max-content max-content;
+        align-items: center;
+        justify-content: space-between;
+        .creator {
+          font-size: 1.5rem;
+          font-style: italic;
+          color: #8f73ff;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+  .follow {
+    background-color: #fff;
+    box-shadow: 0 10px 18px rgba(#000, 0.4);
+    border-radius: 10px 10px 0 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include breakpoint-down(large) {
+      grid-column: 1/-1;
+      padding: 1rem;
+      box-shadow: 0 8px 16px rgba(#000, 0.4);
+    }
+    &__text {
+    }
+    &__icons {
+      display: flex;
+      justify-content: space-between;
+      a {
+        display: inline-block;
+        width: 30%;
+        @include breakpoint-down(large) {
+          width: 25%;
+        }
+      }
+      .icon {
+        width: 100%;
+      }
+    }
+  }
+  .notification {
+    box-shadow: 0 10px 18px rgba(#000, 0.4);
+    border-radius: 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include breakpoint-down(large) {
+      grid-column: 1/-1;
+      padding: 1rem;
+      box-shadow: 0 8px 16px rgba(#000, 0.4);
+    }
+  }
+}
