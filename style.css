@@ -35,7 +35,7 @@ a {
   @media (max-width: 500px) {
     .container {
       margin-top: 5px;
-      width: calc(100vw - 20px); } }
+      width: calc(100vw - 10px); } }
 
 .header {
   margin: 0 auto;

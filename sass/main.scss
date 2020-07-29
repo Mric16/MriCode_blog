@@ -37,7 +37,7 @@ a {
   }
   @include breakpoint-down(medium) {
     margin-top: 5px;
-    width: calc(100vw - 20px);
+    width: calc(100vw - 10px);
   }
 }
 @import "./header";
